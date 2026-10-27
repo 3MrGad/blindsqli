@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blindsqli"
+version = "0.1.0"
+description = "Blind SQL injection data-extraction helper for authorized testing"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "3MrGad" }]
+keywords = ["security", "sql-injection", "pentest", "bug-bounty", "appsec"]
+dependencies = ["requests>=2.25"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+blindsqli = "blindsqli.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/3MrGad/blindsqli"
+
+[tool.setuptools]
+packages = ["blindsqli"]
